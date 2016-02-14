@@ -7,6 +7,12 @@ namespace SimpleCRUD.Models
 {
     public class Anime
     {
+        public const int MAX_PER_SEASON = Properties.EPISODES_PER_SEASON;
+        public const int NORMAL_DURATION = Properties.NORMAL_DURATION;
+        public const int EPISODES_PER_SEASON = Properties.EPISODES_PER_SEASON;
+        public const string CURRENT_SEASON = Properties.CURRENT_SEASON;
+        public const int SHORT_DURATION = Properties.SHORT_DURATION;
+
         public int ID { get; set; }
         public string Title { get; set; }
         public string Publisher { get; set; }
