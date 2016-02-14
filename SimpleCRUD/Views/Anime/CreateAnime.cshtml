@@ -1,0 +1,126 @@
+﻿@model SimpleCRUD.Models.Anime
+
+@{
+    ViewBag.Title = "CreateAnime";
+}
+
+<h2>Add an Anime</h2>
+
+<form action="/Anime/CreateAnime" method="post">
+    <table class="table">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                <input type="text" name="title" value="" required />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Publisher
+            </th>
+            <th>
+                <input type="text" name="publisher" value="" required/>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Author First Name
+            </th>
+            <th>
+                <input type="text" name="firstName" value="" required />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Author Last Name
+            </th>
+            <th>
+                <input type="text" name="lastName" value="" required />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Description
+            </th>
+            <th>
+                <input type="text" name="description" value="" required/>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Release Date
+            </th>
+            <th>
+                <input type="date" name="releaseDate" value="" required />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Genre
+            </th>
+            <th>
+                <select name="genre" required>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="SliceOfLife">Slice Of Life</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Magic">Magic</option>
+                    <option value="Supernatural">Supernatural</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Psychological">Psychological</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Ecchi">Ecchi</option>
+                    <option value="Mecha">Mecha</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Historical">Historical</option>
+                    <option value="Shoujo">Shoujo</option>
+                    <option value="Shounen">Shounen</option>
+                    <option value="Jousei">Jousei</option>
+                    <option value="Kids">Kids</option>
+                    <option value="Military">Military</option>
+                    <option value="Seinen">Seinen</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Season Introduced
+            </th>
+            <th>
+                <select name="season" required>
+                    <option value="Winter2016">Winter 2016</option>
+                    <option value="Spring2016">Spring 2016</option>
+                    <option value="Summer2016">Summer 2016</option>
+                    <option value="Fall2016">Fall 2016</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Rating
+            </th>
+            <th>
+                <input type="number" name="rating" min="1" max="10" step="0.01" value="10" required/>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Aring
+            </th>
+            <th>
+                <select name="aring" required>
+                    <option value="True">Currently Aring</option>
+                    <option value="False">No Longer Aring</option>
+                </select>
+            </th>
+        </tr>
+    </table>
+    <input type="submit" name="operation" value="Add" />
+    <input type="submit" name="operation" value="Cancel" />
+</form>

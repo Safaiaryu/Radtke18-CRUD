@@ -1,0 +1,24 @@
+﻿@model List<SimpleCRUD.Models.Anime>
+
+@{
+    ViewBag.Title = "ShowList";
+}
+
+<h2>Anime</h2>
+
+<br/>
+
+@foreach (var item in Model)
+{
+    <div>
+        <strong>@item.Title </strong><br/>
+        @item.Publisher<br/>
+        @item.Author.FirstName @item.Author.LastName <br /><br/>
+        @item.Description <br/><br/>
+        @item.ReleaseDate <br/>
+        @item.Genre <br/>
+        @item.Season <br/>
+        @item.Rating <br /><br />
+        <hr/>
+    </div>
+}

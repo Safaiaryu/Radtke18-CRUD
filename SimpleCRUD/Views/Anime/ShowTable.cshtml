@@ -1,0 +1,89 @@
+﻿@model List<SimpleCRUD.Models.Anime>
+
+@{
+    ViewBag.Title = "ShowTable";
+}
+
+<h2>List of Anime</h2>
+
+
+<a href="/Anime/CreateAnime">Add a New Anime</a>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Publisher
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Release Date
+        </th>
+        <th>
+            Genre
+        </th>
+        <th>
+            Season
+        </th>
+        <th>
+            Rating
+        </th>
+        <th>
+            Aring
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ID
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Publisher
+            </td>
+            <td>
+                @item.Author.FirstName.ToString() @item.Author.LastName.ToString()
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.ReleaseDate
+            </td>
+            <td>
+                @item.Genre
+            </td>
+            <td>
+                @item.Season
+            </td>
+            <th>
+                @item.Rating
+            </th>
+            <th>
+                @item.Aring
+            </th>
+            <td>
+                @*
+                    Demonstration of using finding and using the item index of the list
+                *@
+                <a href="/Anime/ShowDetail?id=@item.ID">View</a>&nbsp;&nbsp;
+                <a href="/Anime/UpdateAnime?id=@item.ID">Edit</a>&nbsp;&nbsp;
+                <a href="/Anime/DeleteAnime?id=@item.ID">Delete</a>&nbsp;&nbsp;
+            </td>
+        </tr>
+    }
+</table>
